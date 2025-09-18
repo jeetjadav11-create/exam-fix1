@@ -11,7 +11,7 @@ public class Employee{
     private double hourlyWage;
     private double unpaidHours;
 
-    public Employee(String fullname, int yearOfBirth, double hourlyWage){
+    public Employee(String newfullname, int newyearOfBirth, double newhourlyWage){
         fullname = newfullname;
         yearOfBirth = newyearOfBirth;
         hourlyWage = newhourlyWage;
@@ -32,42 +32,46 @@ public class Employee{
     public boolean canDrive(){
         int age = calculateAge(2025);
         // to be completed
-        if ( age>=16)
-        return candrive = true;
-        Else
-        println(16-age);
-        return candrive = false;
-         
+        if ( age>=16){
+            return true;
+        }
+        else{
+            System.out.println ( 16 - age );
+            return false;
+        }
+    } 
         
-    }
 
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
-    private double calculatePay(){
+    private double calculatePay(double hoursWorked){
         // to be completed
-         calculatePay=unpaidHours * hourlyWage;
+        unpaidHours=hoursWorked;
+         double calculatePay=unpaidHours * hourlyWage;
          calculatePay=calculatePay * 70;
          calculatePay=calculatePay / 100;
+         return calculatePay;
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(){
+    public void paySalary(double timeWorked){
         // to be completed
-        Println(fullname+"has received a wire transfer of ",CalculatePay+"CAD");
+        double salaryme=calculatePay(timeWorked);
+        System.out.println(fullname+"has received a wire transfer of "+ salaryme+"CAD");
         unpaidHours=0;
         
     }
     
     private double getunpaidhours(){
-         return (unpaidhours);
+         return unpaidHours;
      }
     
      private void caculateUnpaidHours(int hoursWorked){
-    caculateUnpaidHours=unpaidHours+hoursWorked;
-    unpaidhours= caculateUnpaidHours;
+       double caculateUnpaidHours=unpaidHours+hoursWorked;
+      unpaidHours= caculateUnpaidHours;
      }
     
 }
