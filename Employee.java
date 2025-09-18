@@ -13,8 +13,8 @@ public class Employee{
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         fullname = newfullname;
-        this.yearOfBirth = yearOfBirth;
-        this.hourlyWage = hourlyWage;
+        yearOfBirth = newyearOfBirth;
+        hourlyWage = newhourlyWage;
         onLeave = false;
         unpaidHours = 0.0;
     }
@@ -32,11 +32,12 @@ public class Employee{
     public boolean canDrive(){
         int age = calculateAge(2025);
         // to be completed
-        if Age >= then;
+        if ( age>=16)
         return candrive = true;
-        else;
-        println(16-Age);
+        Else
+        println(16-age);
         return candrive = false;
+         
         
     }
 
@@ -45,8 +46,8 @@ public class Employee{
      */
     private double calculatePay(){
         // to be completed
-         calculatePay=unpaidHours x hourlyWage;
-         calculatePay=calculatePay x 70;
+         calculatePay=unpaidHours * hourlyWage;
+         calculatePay=calculatePay * 70;
          calculatePay=calculatePay / 100;
     }
 
@@ -55,17 +56,18 @@ public class Employee{
      */
     public void paySalary(){
         // to be completed
-        Println(fullname+"has received a wire transfer of "calculatePay+"CAD");
+        Println(fullname+"has received a wire transfer of ",CalculatePay+"CAD");
         unpaidHours=0;
         
     }
     
-    private double getunpaidhours();
+    private double getunpaidhours(){
          return (unpaidhours);
-
-    private void caculateUnpaidHours(int hoursWorked)
+     }
+    
+     private void caculateUnpaidHours(int hoursWorked){
     caculateUnpaidHours=unpaidHours+hoursWorked;
     unpaidhours= caculateUnpaidHours;
-    
+     }
     
 }
